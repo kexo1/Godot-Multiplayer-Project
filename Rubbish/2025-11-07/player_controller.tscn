@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs72ogkvdd7d6"]
+
+[ext_resource type="Script" uid="uid://dta18rjdto63r" path="res://scripts/player/camera_controller.gd" id="1_g2uji"]
+[ext_resource type="Script" uid="uid://bv5piagl8huw6" path="res://scripts/player/player_controller.gd" id="1_wr06p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
+albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ucva2"]
+radius = 0.4
+height = 1.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iof21"]
+radius = 0.4
+height = 1.8
+
+[node name="PlayerController" type="CharacterBody3D"]
+script = ExtResource("1_wr06p")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_iof21")
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_ucva2")
+
+[node name="Collider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_iof21")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CameraController" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+top_level = true
+script = ExtResource("1_g2uji")
+
+[node name="Camera" type="Camera3D" parent="CameraController"]
+
+[node name="CameraControllerAnchor" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)

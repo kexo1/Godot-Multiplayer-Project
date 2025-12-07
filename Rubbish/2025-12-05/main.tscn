@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdopu0sg6v0q1"]
+
+[ext_resource type="Script" uid="uid://d0q5ifj5lkm56" path="res://scripts/networking/main_spawner.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://c0ceyvrpb02fi" path="res://scenes/ui.tscn" id="2_tefeu"]
+[ext_resource type="Material" uid="uid://bfa4nothplc0o" path="res://assets/materials/orange.tres" id="5_ya4ey"]
+[ext_resource type="Material" uid="uid://dw73xqdqvfikw" path="res://assets/materials/purple.tres" id="6_eb6dy"]
+[ext_resource type="Material" uid="uid://dn4g6g8oyuk70" path="res://assets/materials/black.tres" id="7_trceg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_h2yge"]
+sky_material = SubResource("ProceduralSkyMaterial_0xm2m")
+
+[sub_resource type="Environment" id="Environment_1bvp3"]
+background_mode = 2
+sky = SubResource("Sky_h2yge")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_tbgi4")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1bvp3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.34097514, -0.342304, 0.87553644, 0.8404994, 0.3061528, 0.44702506, -0.42106637, 0.8883122, 0.18331578, -2.5, 14.900001, -0.1)
+layers = 3
+shadow_enabled = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2.6, -11.800001)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.100001, 2.3841858e-07, -1.7921678e-07)
+use_collision = true
+size = Vector3(0.4, 4.8, 8)
+material = ExtResource("5_ya4ey")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(-8.436298e-08, 1.93, 0, -1.93, -8.436298e-08, 0, 0, 0, 1.93, -0.023531228, -1.8, 0)
+operation = 2
+radius = 0.7
+height = 0.36875
+sides = 12
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2000003, -0.95000005, 14.899999)
+height = 2.9
+material = ExtResource("6_eb6dy")
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1000004, -1.2, 12.099998)
+height = 2.4
+material = ExtResource("6_eb6dy")
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1.925, 10.7)
+height = 0.95000005
+material = ExtResource("6_eb6dy")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6000001, -1.6, 13.4)
+height = 1.6000001
+material = ExtResource("6_eb6dy")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -11.800001, -2.6, -5.1579445e-07)
+size = Vector3(24, 0.4, 24)
+material = ExtResource("7_trceg")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+size = Vector3(0.4, 4.8, 24)
+material = ExtResource("5_ya4ey")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-2.1855692e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855692e-07, -11.800005, -2.1457672e-06, 11.799998)
+size = Vector3(0.4, 4.8, 24)
+material = ExtResource("5_ya4ey")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -23.600002, -9.536743e-07, -1.0315889e-06)
+size = Vector3(0.4, 4.8, 24)
+material = ExtResource("5_ya4ey")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.8, -4.7683716e-07, -11.800002)
+size = Vector3(0.4, 4.8, 24)
+material = ExtResource("5_ya4ey")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://bs72ogkvdd7d6")
+spawn_path = NodePath("../Players")
+
+[node name="Players" type="Node3D" parent="."]
+
+[node name="ui" parent="." instance=ExtResource("2_tefeu")]
+
+[connection signal="client_started" from="ui" to="." method="_on_client_started"]
+[connection signal="leave_to_title_screen" from="ui" to="." method="_on_leave_to_title_screen"]
+[connection signal="server_started" from="ui" to="." method="_on_server_started"]

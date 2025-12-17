@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Weapons" load_steps=3 format=3 uid="uid://bvqc5bm24n17o"]
+
+[ext_resource type="Script" uid="uid://cfvlldf7raft2" path="res://scripts/weapon/weapons.gd" id="1_h2osn"]
+[ext_resource type="PackedScene" uid="uid://boqetxs5iljnv" path="res://assets/objects/weapons/glock/glock.fbx" id="1_y1i85"]
+
+[resource]
+script = ExtResource("1_h2osn")
+name = &"glock"
+position = Vector3(0.56, -0.275, -0.635)
+rotation = Vector3(0, 75, 0)
+size = Vector3(2.345, 2.345, 2.345)
+damage = 12
+fire_rate = 8.0
+magazine_size = 20
+reload_speed = 3.0
+object = ExtResource("1_y1i85")
+metadata/_custom_type_script = "uid://cfvlldf7raft2"

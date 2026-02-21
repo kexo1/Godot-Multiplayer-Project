@@ -8,7 +8,7 @@
 
 ![Gameplay](readmeFiles/photo1.png)
 
-Players can choose between two weapons: AK-47 and Glock.
+**Players can choose between two weapons: AK-47 and Glock.**
 
 ![Weapons](readmeFiles/photo2.png)
 
@@ -18,7 +18,6 @@ Players can choose between two weapons: AK-47 and Glock.
 
 ## Features
 - **Multiplayer ready:** Fully functioning LAN-based 1v1 matches  
-- **Weapon variety:** Two distinct weapons with different firing styles  
 - **Respawn system:** Shoot, die, and immediately get back into the arena  
 - **Barebones but functional:** Perfect for testing multiplayer concepts  
 
@@ -31,10 +30,10 @@ Players can choose between two weapons: AK-47 and Glock.
 ## How to Play
 1. Extract `project.7z` to a folder  
 2. Run the executable (`.exe`) inside the extracted folder  
-3. **Join via LAN** – Enter the host IP to connect  
-4. **Movement:** WASD keys  
+3. **Join via LAN** – Enter the host IP to connect
+4. **Movement:** WASD keys and space
 5. **Shooting:** Left mouse click  
-6. **Switch weapons:** Number keys 1 (AK-47) or 2 (Glock)  
+6. **Switch weapons:** Number keys 1 (Glock) or 2 (AK-47) 
 
 ---
 

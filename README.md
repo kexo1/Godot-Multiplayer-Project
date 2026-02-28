@@ -39,4 +39,4 @@
 
 > [!NOTE]
 > This is a personal testing project to learn multiplayer in Godot.  
-> The game is minimal but has a fully working networked 1v1 system ready for expansion.
+> The game is minimal but has a fully working networked deathmatch mode ready for expansion.

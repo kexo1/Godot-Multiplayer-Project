@@ -2,7 +2,7 @@
 
 # Godot Multiplayer Project
 
-*A simple 1v1 arena FPS multiplayer game.*
+*A simple deathmatch arena FPS multiplayer game.*
 
 **Join via LAN, shoot your opponent, and respawn to keep playing.**
 
@@ -17,7 +17,7 @@
 ---
 
 ## Features
-- **Multiplayer ready:** Fully functioning LAN-based 1v1 matches  
+- **Multiplayer ready:** Fully functioning LAN-based matches  
 - **Respawn system:** Shoot, die, and immediately get back into the arena  
 - **Barebones but functional:** Perfect for testing multiplayer concepts  
 
